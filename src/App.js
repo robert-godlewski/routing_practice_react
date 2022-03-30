@@ -2,27 +2,13 @@ import React, {useState} from 'react';
 import {
   BrowserRouter,
   Routes,
-  Route,
-  useParams
+  Route
 } from 'react-router-dom';
 import './App.css';
 
-const Home = () => {
-  return (
-    <h1>Welcome</h1>
-  );
-}
-
-const RouteDecour = (props) => {
-  const {info, font_color, bg_color} = useParams();
-
-  return (
-    <h1 style={{
-      color: font_color,
-      backgroundColor: bg_color
-    }}>{isNaN(info) ? "The word is:" : "The number is:"} {info}</h1>
-  );
-}
+//Components
+import Home from './components/Home';
+import RouteDecour from './components/RouteDecour';
 
 function App() {
   const [info, font_color, bg_color] = useState("");
